@@ -1,4 +1,4 @@
-#### Linux System Administration Common Commands
+### Linux System Administration Common Commands
 
 1.	To create a new user
 ```
@@ -28,11 +28,12 @@ who
 ```
 cut -d: -f1 /etc/passwd
 ```
-8.	To check real and effective user and group numeric IDs
+8.	To check user and group numeric IDs
 ```
 id user_name
 ```
 eg, print the numeric id of root: `id root`.
+
 9.	To change the password for the current user
 ```
 passwd
@@ -57,7 +58,7 @@ to
 ```
 account required pam_nologin.so
 ```
-12.	To set allowed users bypassing file `/etc/nologin`, for example, if you want to allow users in the `sshusers` group to login via a text console, add the following line to file `/etc/pam.d/sshd` just before the line with `account required pam_nologin.so`:
+12.	To set allowed users bypassing the file `/etc/nologin`, for example, if you want to allow users in the `sshusers` group to login via a text console, add the following line to file `/etc/pam.d/sshd` just before the line with `account required pam_nologin.so`:
 ```
 account [success=1 default=ignore] pam_succeed_if.so quiet user ingroup sshusers
 ```
