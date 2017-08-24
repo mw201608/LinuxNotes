@@ -44,7 +44,7 @@ passwd user_name
 ```
 10. Find out the home directory of a user
 ```
-grep username /etc/passwd
+grep user_name /etc/passwd
 ```
 11. To stop all non-root users from login, create a file `/etc/nologin`
 ```
@@ -58,6 +58,8 @@ to
 ```
 account required pam_nologin.so
 ```
+Note that file /etc/nologin will usually be removed after a system reboot.
+
 12. To set allowed users bypassing the file `/etc/nologin`, for example, if you want to allow users in the `sshusers` group to login via a text console, add the following line to file `/etc/pam.d/sshd` just before the line with `account required pam_nologin.so`:
 ```
 account [success=1 default=ignore] pam_succeed_if.so quiet user ingroup sshusers
