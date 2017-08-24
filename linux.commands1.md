@@ -1,6 +1,5 @@
 ### Linux System Administration Common Commands
 
-A list:
 1. To create a new user
 ```
 sudo useradd new_user_name
