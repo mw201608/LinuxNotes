@@ -1,4 +1,4 @@
-### Linux System Administration Common Commands
+### Linux System Administration Commands And Setttings
 
 1. To create a new user
 ```
